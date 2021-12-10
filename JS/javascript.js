@@ -41,13 +41,3 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function(){
-    $(".name").validate({
-        rules:{
-            nome: {
-                maxlength: 100,
-                minlength: 10
-            }
-        }
-    });
-});
