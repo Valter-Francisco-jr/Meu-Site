@@ -113,6 +113,9 @@ html{
 .home .max-width{
     margin: auto 0 auto 40px;
 }
+.home img{
+    display: flex;
+}
 .home .home-content .text-1{
     font-size: 27px;
 }
@@ -252,6 +255,7 @@ section{
     width:50%;
 }
 .about .about-content .left img{
+    display: flex;
     width: 400px;
     height: 300px;
     border-radius: 6px;
@@ -523,6 +527,21 @@ footer span a:hover{
         width: 350px;
         height: 200px;
     }
+    .home{
+        display: flex;
+        background: url('imagemVF1.png') no-repeat center;
+        height: 50vh; 
+        color: #fff;
+        min-height: 500px;
+    }
+    .skills{
+        display: flex;
+        background: #000;
+        height: 50vh; 
+        color: #fff;
+        min-height: 800px;
+        
+    }
 }
 @media (max-width: 991px){
     .navbar .max-width{
@@ -534,7 +553,7 @@ footer span a:hover{
         overflow-x: hidden;
     }
     .home{
-        background: rgb(0, 0, 0);
+        background: rgb(0, 0, 0) url("foto.png") cover;
         display: flex;
     }
     .navbar .menu{
@@ -548,7 +567,7 @@ footer span a:hover{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
         padding-top: 40px;
         align-items: center;
         transition: all 0.8s ease;
@@ -626,13 +645,40 @@ footer span a:hover{
         margin-top: 15px;
     }
 }
-@media (max-width: 690px){
-
+@media (max-width: 760px){
+    .home{
+        background: rgb(0, 0, 0) url("Foto2.png") cover;
+    }
     .home .home-content .text-1{
         font-size: 27px;
     }
     .home .home-content .text-2{
-        font-size: 60px;
+        font-size: 40px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+}
+@media (max-width: 716px){
+    .home .home-content .text-1{
+        font-size: 27px;
+    }
+    .home .home-content .text-2{
+        font-size: 40px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+}
+@media (max-width: 690px){
+    .home{
+        background: rgb(0, 0, 0);
+    }
+    .home .home-content .text-1{
+        font-size: 27px;
+    }
+    .home .home-content .text-2{
+        font-size: 40px;
     }
     .home .home-content .text-3{
         font-size: 32px;
@@ -675,16 +721,18 @@ footer span a:hover{
         margin-top: 15px;
     }
 }
-@media (max-width: 500px){
-
+@media (max-width: 530px){
+    .home{
+        background: rgb(0, 0, 0);
+    }
     .home .home-content .text-1{
         font-size: 25px;
     }
     .home .home-content .text-2{
-        font-size: 45px;
+        font-size: 40px;
     }
     .home .home-content .text-3{
-        font-size: 27px;
+        font-size: 25px;
     }
     .skills .skills-content .rigth span{
         font-weight: 500;
@@ -694,55 +742,66 @@ footer span a:hover{
         min-height: 1250px;
     }
 }
-@media (max-width: 496px){
+@media (max-width: 500px){
     .home{
         background: rgb(0, 0, 0);
-        width: 90vh;
+        width: 100%;
         display: flex;
     }
     .home .home-content .text-1{
-        font-size: 27px;
+        font-size: 17px;
+       
     }
     .home .home-content .text-2{
-        font-size: 45px;
+        font-size: 30px;
+     
     }
     .home .home-content .text-3{
-        font-size: 29px;
+        font-size: 19px;
+     
+    }
+    .home .home-content a{
+        font-size: 13px;
+        padding: 10px 15px;
     }
     .about{
         display: flex;
         text-align: justify;
         font-family: 'Roboto', sans-serif;
     }
+    .about .title::after{
+        height: 16px;
+        position: absolute;
+        bottom: -9px;
+        left: 50%;
+        font-size: 17px;
+        padding: 5px;
+    }
     .about .title{
         font-family: 'Ubuntu', sans-serif;
         text-align: center;
         font-size: 30px;
+        height: 100%;
         font-weight: 500;
         margin-bottom: 60px;
         margin-left: 20px;
-        padding-bottom: 20px;
         position: relative;
     }
     .about .about-content .left img{
-        width: 350px;
-        margin-left: 40px;
-        height: 200px;
+        width: 200px;
+        height: 150px;
         border-radius: 6px;
     }
     .about .about-content .rigth .text{
-        font-size: 22px;
+        font-size: 17px;
         font-weight: 500;
-        
         margin-bottom: 10px;
     }
-    .about .about-content .rigth p{
-        font-size: 22px;
+    .about-content .rigth p{
+        font-size: 15px;
         text-align: justify;
-        margin-right: -30px;
-        
     }
-    .about .about-content .rigth a{
+    .about-content .rigth a{
         display: inline-block;
         background: #1614c4;
         color: #fff;
@@ -762,13 +821,8 @@ footer span a:hover{
         height: 100vh;
         /*left: 0;*/
         right: 0;
-        top: 0;
-        background: #1614c4;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateY(-100%);
         padding-top: 40px;
+        transform: translateX(-100%);
         align-items: center;
         transition: all 0.8s ease;
     }
@@ -778,16 +832,14 @@ footer span a:hover{
     }
     .skills{
         display: flex;
-        background: #000;
-        width: 90vh;
-        height: 100vh; 
+        width: 100%;
         color: #fff;
-        min-height: 1100px;
+        min-height: 1200px;
         font-family: 'Ubuntu', sans-serif;   
     }
     .contact{
         display: flex;
-        width: 90vh;
+        width: 100%;
         min-height: 900px;
         font-family: 'Ubuntu', sans-serif; 
     } 
@@ -802,7 +854,7 @@ footer span a:hover{
     footer{
         background: #111;
         padding: 10px 23px;
-        width: 90vh;
+        width: 100%;
         color: #fff;
         text-align: center;
     }
@@ -811,65 +863,123 @@ footer span a:hover{
         text-decoration: none;
     }
 }
-@media (max-width: 399px){
-
+@media (max-width: 419px){
     .home .home-content .text-1{
-        font-size: 25px;
+        font-size: 20px;
     }
     .home .home-content .text-2{
-        font-size: 45px;
+        font-size: 25px;
     }
     .home .home-content .text-3{
-        font-size: 27px;
+        font-size: 17px;
+    }
+}
+@media (max-width: 400px){
+
+    .home{
+        background: rgb(0, 0, 0);
+        width: 100%;
+        display: flex;
+    }
+    .home .home-content .text-1{
+        font-size: 18px;
+        margin-left: -40px;
+    }
+    .home .home-content .text-2{
+        font-size: 25px;
+        margin-left: -40px;
+    }
+    .home .home-content .text-3{
+        font-size: 18px;
+        margin-left: -40px;
+    }
+    .home .home-content a{
+        font-size: 10px;
+        font-weight: 500;
+        padding: 8px 25px;
+        margin-top: 20px;
+        margin-left: -25px;
+    }
+    .about{
+        display: flex;
+        text-align: justify;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
     }
     .about .title{
         font-family: 'Ubuntu', sans-serif;
         text-align: center;
         font-size: 30px;
         font-weight: 500;
-        margin-left: 40px;
+        margin-right: 15px;
         margin-bottom: 60px;
         padding-bottom: 20px;
-        position: relative;
+        
     }
-    .about{
-        display: flex;
-        text-align: justify;
-        font-family: 'Roboto', sans-serif;
+    .about .title::after{
+        height: 16px;
+        position: absolute;
+        bottom: -9px;
+        left: 50%;
+        font-size: 17px;
+        padding: 5px;
     }
     .about .about-content .left img{
-        display: flex;
-        align-items: center;
-        margin-left: 40px;
-        width: 350px;
-        height: 200px;
+        width: 200px;
+        height: 120px;
         border-radius: 6px;
     }
     .about .about-content .rigth .text{
-        font-size: 22px;
+        font-size: 16px;
         font-weight: 500;
         margin-bottom: 10px;
-        margin-left: 10px;
+        margin-left: -25px;
     }
-    .about .about-content .rigth p{
-        font-size: 22px;
+    .about .about-content .rigth .text span{
+        font-size: 15px;
+    }
+    .about-content .rigth p{
+        font-size: 16px;
         text-align: justify;
-        margin-left: 10px;
-        margin-right: -30px;
+        margin-left: -25px;
+        margin-right: -25px;
+        
         
     }
     .about .about-content .rigth a{
         display: inline-block;
         background: #1614c4;
         color: #fff;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: 500;
         padding: 10px 30px;
         margin-top: 20px;
         margin: 20px auto 60px;
-        border-radius: 6px;
-        border: 2px solid #1614c4;
-        transition: all 0.3s ease;
+        
+    }
+    .navbar .menu{
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: #1614c4;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        padding-top: 40px;
+        align-items: center;
+        transition: all 0.8s ease;
+    }
+    .navbar .menu a{
+        color: rgb(0, 0, 0);
+    }
+    .mobile-list{
+        left: 140px;
+        width: 100%;
+        position: relative;
+        display: block;
     }
     .skills .skills-content .rigth span{
         font-weight: 500;
@@ -878,17 +988,29 @@ footer span a:hover{
     .skills{
         display: flex;
         background: #000;
-        width: 90vh;
+        width: 100%;
         height: 100vh; 
         color: #fff;
-        min-height: 1050px;
+        min-height: 1250px;
         font-family: 'Ubuntu', sans-serif;   
+    }
+    .skills .skills-content .left p{
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+    .skills .skills-content .left .text{
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+    .skills .skills-content .rigth .bars{
+        margin-left: -25px;
+        margin-right: -25px;
     }
     .contact{
         display: flex;
-        width: 90vh;
+        height: 100vh;
         min-height: 900px;
-        font-family: 'Ubuntu', sans-serif; 
+        font-family: 'Ubuntu', sans-serif;
     } 
     .contact .title{
         font-family: 'Roboto', sans-serif;
@@ -898,10 +1020,19 @@ footer span a:hover{
         margin-bottom: 60px;
         padding-bottom: 20px;
     }
+    .contact .max-width{
+        width: 100%;
+    }
+    .contact .contact-content .row .info {
+        font-size: 13px;
+    }
+    .contact .contact-content .row .info{
+        margin-left: 10px;
+    }
     footer{
         background: #111;
         padding: 10px 23px;
-        width: 90vh;
+        width: 100%;
         color: #fff;
         text-align: center;
     }
@@ -909,4 +1040,183 @@ footer span a:hover{
         color: #ffffff;
         text-decoration: none;
     }
+}
+@media (max-width: 320px){
+
+    .home{
+        background: rgb(213, 8, 240);
+        width: 112%;
+        display: flex;
+    }
+    .home .home-content .text-1{
+        color: #000000;
+    }
+    .home .home-content .text-2{
+        color: #000000;
+    }
+    .home .home-content .text-3{
+        color: #000000;
+    }
+    .home .home-content .text-3 span{
+        color: #000000;
+    }
+    .home .home-content a{
+        background: #000000;
+        color: rgb(213, 8, 240);
+        border: 2px solid #000000;
+    }
+    .home .home-content a:hover{
+        color: #000000;
+    }
+    .navbar.sticky{
+        background: rgb(213, 8, 240);
+    }
+    .navbar .menu{
+        background: rgb(213, 8, 240);
+        width: 100%;
+        height: 200vh;
+    }
+    .navbar.sticky .logo a{
+        color: rgb(0, 0, 0);
+    }
+    .navbar.sticky .logo a span{
+        color: rgb(0, 0, 0);
+    }
+    .navbar .logo a{
+        font-family: "Walting Font";
+        color: rgb(0, 0, 0);
+        font-size: 25px;
+        font-weight: 500px;
+        transition: color 0.3s ease;
+    
+    }
+    .navbar .logo a span{
+        color: rgb(0, 0, 0);
+    }
+    .mobile-list{
+        color: #000;
+    }
+    .scroll-up-btn{
+        color: rgb(0, 0, 0);
+        background: rgb(213, 8, 240);
+        border: 2px solid #000;
+    }
+    .about .about-content .rigth a{
+        display: inline-block;
+        background: rgb(213, 8, 240);
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: 500;
+        padding: 10px 10px;
+        margin-top: 20px;
+        margin-left: -25px;
+        border-radius: 6px;
+        border: 2px solid rgb(213, 8, 240);
+        transition: all 0.3s ease;
+    }
+    .about .about-content .rigth a:hover{
+        color: rgb(213, 8, 240);
+        background: none;
+    }
+    .about .title::after{
+        background:#fff;
+        color: rgb(213, 8, 240);
+        padding: 10px;
+        transform: translateX(-50%);
+    }
+    .about .about-content .rigth .text span{
+        font-size: 15px;
+        color: rgb(213, 8, 240);
+    }
+    .skills .skills-content .left a:hover{
+        color: #000000;
+    }
+    .skills{
+        display: flex;
+        background: rgb(213, 8, 240);
+        width: 112%;
+        height: 100vh; 
+        color: rgb(0, 0, 0);
+        min-height: 1250px;
+        font-family: 'Ubuntu', sans-serif;   
+    }
+    .skills .title::after{
+        background: rgb(213, 8, 240);
+        color: #000000;
+        
+    }
+    .skills .skills-content .left a{
+        background: rgb(0, 0, 0);
+        color: rgb(213, 8, 240);
+        border: 2px solid rgb(0, 0, 0);
+    }
+    .skills .skills-content .rigth .line::before{
+        background: #000000;
+    }
+    .skills .title::before{
+        background: rgb(0, 0, 0);
+    }
+    
+    .contact{
+        display: flex;
+        height: 112vh;
+        min-height: 900px;
+        font-family: 'Ubuntu', sans-serif;
+    } 
+    .contact .title{
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 60px;
+        padding-bottom: 10px;
+        margin-left: 30px;
+    }
+    .contact .title::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-49%);
+    }    
+    .contact .contact-content .text{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .contact .contact-content p{
+        font-size: 13px;
+        text-align: justify;
+        
+    }
+    .contact .contact-content .row ion-icon{
+        color: #000000;
+    }
+    .contact .max-width{
+        width: 100%;
+    }
+    .contact .contact-content .row .info {
+        font-size: 11px;
+        margin-left: 5px;
+    }
+    .contact .rigth form .button button{
+        border: 2px solid rgb(213, 8, 240);
+        background: rgb(213, 8, 240);
+        color: rgb(0, 0, 0);
+    }
+    .contact .rigth form .button button:hover{
+        color: rgb(213, 8, 240);
+        background: none;
+    }
+    footer{
+        background: rgb(213, 8, 240);;
+        padding: 10px 23px;
+        width: 112%;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    footer span a{
+        color: #000000;
+    }
+    
 }
